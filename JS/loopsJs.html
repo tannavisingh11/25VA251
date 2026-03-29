@@ -3,12 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Loops in JS</title>
 </head>
 <body>
     <script>
-        //using for --in loop =iterates over the enumerable properties(keys )
-        
+        //repeatedly execute a block of code until a specified condition is met. 
+
+        // for ........while......do --while ..... for--in ......... for --of
+
+        // for and for.........in
+        let studentList=["Vikas", "Abhay", "Neelesh", "Madan", "John"];
+
+        for(let i=0;i<studentList.length;i++){
+            // console.log(studentList[i]);
+        }
+        // using for..in loop =Iterates over the enumerable properties (keys)
+        //  of an object
+
+        for(let x in studentList){
+            // console.log(studentList[x]);
+        }
+        // using for...of loop.. Iterates over the values of iterable objects such as arrays, strings, Maps, and Sets.
+      for(let y of studentList){
+        console.log(y);
+      }
+
     </script>
+    
 </body>
 </html>

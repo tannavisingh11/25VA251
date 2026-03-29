@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in JS</title>
+</head>
+
+<body>
+    <script>
+        //function:- In JavaScript, a function is a reusable block of code designed to perform a specific task.
+
+        // normal function
+        //without parametrs
+        function demo() {
+            console.log("Hello JS");
+        }
+        demo(); //function calling
+
+        //with parameters
+        function demo1(text) {
+            console.log("Hello " + text);
+        }
+        demo1("React");
+        //with defualt parametrs
+
+        function cal(a,b=9){
+            console.log("addtion of  two number is " + (a+b));
+        }
+        cal(12);
+
+
+
+        //anonyomous function: An anonymous function in JavaScript is a function that does not have any name or identifier. 
+
+        let msg=function(){
+        console.log("Hello Advanced JS");
+        };
+        msg();
+        //shore code for above function i.e. arrow function
+        let msg1=()=>console.log("Hello function as an arrow");
+        msg1();
+        //arrow function using multilines
+
+        let add=(a,b)=>{
+            console.log("First number is " + a);
+            console.log("Second numbe is " + b);
+      console.log("addtion of two number is " + (a+b));
+        }
+        add(4,5);
+
+        //IIFE: An Immediately Invoked Function Expression (IIFE) is a JavaScript function that runs as soon as it is defined.
+        (function(){
+            console.log("IIFE in JS");
+        })();
+        //IIFE using arrow
+        (()=>console.log("IIFE using arrow"))();
+
+        //callback function:- 
+        // callback function is a function passed as an argument to another function, which is then executed at a later time or upon a specific event, serving as a cornerstone for asynchronous programming in JavaScript.
+
+        function mul(callback){
+            var num1=10;
+            console.log("First Value is " + num1);
+            var num2=20;
+            console.log("Second Value is " + num2);
+            var res=num1*num2;
+            callback(res);
+        }
+        function result(res){
+            console.log("Multiplication is " + res);
+        }
+        mul(result);
+
+        // callback function using SetTimeout API
+
+        function msg2(){
+            console.log("Hello Call Back");
+            document.writeln("Hello");
+        }
+        function loading(){
+            document.writeln("loding...........")
+        };
+        setTimeout(msg2,2000);
+        loading();
+
+
+        // map filter and reduce
+//The map() method in JavaScript creates a new array by applying a provided function to every element of an existing array, without modifying the original array. It is a powerful tool for data transformation.
+        let num=[3,4,5,7];
+        let finalResult=num.map(n=>n*2);
+        console.log(finalResult);
+
+        //filter method:- method creates a new array with all elements that pass a specific condition implemented by a provided callback function. It does not modify the original array.
+        let finalResult1=num.filter(n=>(n>3));
+        console.log(finalResult1);
+
+        //reduce method:- executes a user-supplied "reducer" callback function on each element of an array, resulting in a single output value.
+
+        let finalResult2=num.reduce((total,n)=>total+n);
+        console.log(finalResult2);
+
+        //Promises : JavaScript promises are objects that represent the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+        // Promises stage
+    /*   The three stages of a JavaScript promise are:
+Pending: The initial stage, where the asynchronous operation is still in progress, and the outcome (value or error) is not yet available.
+Fulfilled (also called Resolved): The operation completed successfully, and the promise now has a resulting value.
+Rejected: The operation failed, and the promise has a reason for the failure (an error object) */
+
+
+let promise=new Promise(function(resolve, reject){
+    let age =55;
+   if(age>=18){
+    resolve("Valid age");
+   }
+   else{
+    reject("wait for next year");
+   }
+});
+promise.then(result=>console.log(result)).
+catch(error=>console.log(error)).
+finally(msg=>console.log("done"));
+
+//async await.........async and await are modern 
+
+
+
+async function userData(){
+    try{
+        let data=await fetch('https://dummyjson.com/products/1');
+        let updateData=await data.json();
+        console.log(updateData);
+    }
+    catch(error){
+        console.log("Not fetched"+error);
+    }
+}
+userData();
+//Local storage- 
+
+let userInfo={
+    name:"John",
+    age:23,
+    mob:979797898,
+    eMail:"john245@gmail.com"
+}
+localStorage.setItem('preferences',JSON.stringify(userInfo));
+let storagePreference=JSON.parse(localStorage.getItem('preferences'));
+console.log(storagePreference.name);
+    </script>
+
+</body>
+
+</html>

@@ -3,57 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>conditional statement in Js</title>
+    <title>Conditional Statement in JS</title>
 </head>
 <body>
     <script>
-        // conditional statement
+        // conditional statement:used to perform different actions based on different conditions, controlling the flow of a program
 
-        //if------
-        let age=18;
+        // if.....
+        let age=16;
 
         if(age<18){
-            console.log(" not valid age for vote casting")
+            // console.log("not valid age for vote casting");
         }
-        //console.log("valid age for vote casting!");
+        // console.log("valid age for vote casting!");
 
-        //if----------------else
+        // if -----------else
         let myAge=12;
-        if(myAge>=18) {
-          console.log("valid age for vote casting");
+        if(myAge>=18){
+            console.log("valid age for vote casting!");
         }
         else{
-            console.log(" not a valid age!")
+            console.log("Not valid age!");
         }
-        //switch--------------case
-        let grade='C';
+        //switch ---case
+        let grade='A';
         switch(grade){
-            case 'A':result="first division";
+            case 'A':result="First Division";
             break;
-            case 'B':result="second division";
+            case 'B':result="Second Division";
             break;
-            case 'c':result="third division";
+            case 'C':result="Third Division";
             break;
-            default:result="Fail";
-
+            default :result="Fail";
         }
         console.log(result);
-        //if-----------elseif----else----------
+        //if...elseif...else..............
 
-        let mark=67;
-        if(mark>=60){
-            console.log("First division marks");
-         }
-        else if(marks<60 && marks>40){
-       console.log("Second division marks");
+        let marks=67;
+        if(marks>=60){
+            console.log("First Division Marks");
+        }
+        else if(marks<60 && marks>=40){
+           console.log("Second Divison Marks");
         }
         else if(marks<40 && marks>30){
-            console.log("Third division marks");
+            console.log("Third Divison Marks");
         }
         else{
             console.log("Fail");
-
         }
-</script>
+
+    </script>
+    
 </body>
 </html>

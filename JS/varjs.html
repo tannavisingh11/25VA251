@@ -3,61 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>information</title>
+    <title>JS Variable Data Types</title>
 </head>
 <body>
     <script>
+        // JS Variable Data Types
+        // Primitive - String, number, boolean, null, undefined, symbol and bigint
+        //Value types store the actual data directly within the variable's memory location (typically on the stack).
+
+        // string
+
         let name="ABES";
         console.log(name);
         console.log(typeof(name));
 
-        let myCot=8423967066;
+        // number
+        let myCot=9679678967979;
         console.log(myCot);
         console.log(typeof(myCot));
 
-        let coursedemo=false;
-        console.log(coursedemo);
-        console.log(typeof(coursedemo));
-        //null
+        // Boolean
+        let courseDone= false;
+        console.log(courseDone);
+        console.log(typeof(courseDone));
+       // Null
         let add=null;
         console.log(add);
         console.log(typeof(add));
-        //undefined
+       // undefined
         let email;
         console.log(email);
         console.log(typeof(email));
-        
-        //bigInt
-        let BigAmount=BigInt(3225455412154585122457);
-        console.log(BigAmount);
-        console.log(typeof(BigAmount));
+        // Bigint
+        let bigAmount=BigInt(124124253453465546479786877686867876);
+        console.log(bigAmount);
+        console.log(typeof(bigAmount));
+
+        // Symbol - A unique primitive identifier
+        //The JavaScript ES6 introduced a new primitive data type called Symbol. Symbols are immutable (cannot be changed) and are unique.
 
         let val1=Symbol("Hello");
         let val2=Symbol("Hello");
-        console.log(val1=val2);
+        console.log(val1==val2);
         console.log(typeof(val1));
 
-        let myInfo={
-            name:"Tannavi",
-            mob:8423967066,
-            isMarried:false,
-            email:"Tannavi@11@gmail.com",
-            adress:null
+        // Reference or Non-Primitive - defined in pair i.e key and value(mutable)
+        //Reference types store a reference (or memory address, a pointer) to the actual data, which is stored in a separate memory area called the heap. 
+        // object {}, function () and array []
 
+        //object -  Objects store data in key: value pairs, where the key (or name/identifier) is a string (or Symbol) and the value can be anything (a primitive, an array, or even another object).
+
+        let myInfo={
+            name:"Abhay", 
+            mob:3535534543, 
+            isMarried:false, 
+            eMail:"abhya123@gmail.com", 
+            address:null
+        }
+        // access object's keys
+        console.log(myInfo);
+        console.log(myInfo.eMail);
+       
+        // for---in - Iterates over the properties of an Object
+        let details="";
+        for(let a in myInfo){
+            // details += myInfo[a] + " ";
+            // console.log(details);
+           console.log("my details are " + myInfo[a]);
         }
 
-            console.log(myInfo);
-            console.log(myInfo.email);
+        // funtion - a reusable block of code designed to perform a specific task
+        function hello(){
+            let myName="ABES EC";
+            console.log(myName);
+            console.log(typeof(hello));
+        }
+        hello();
 
-            function hello(){
-                let myname="ABESEC";
-                console.log(myname);
-                console.log(typeof(hello));
-            }
-            hello();
+        // array-In JavaScript, an array is a single variable used to store an ordered collection of multiple values, known as elements, accessed via a zero-based index. Arrays are a special type of object and can hold elements of different data types, including strings, numbers, and other arrays.
+        let students=["name1","name2","name3"];
+        console.log(students[0]);
 
-            let student=["name1","name2","name3"];
-            console.log(student[0]);
+         // for--of Iterates over array like objects
+        // The for...of loop provides a concise and readable way to iterate directly over element values. 
+        /* for(let x of students){
+            console.log(x);
+        } */
+        for(let y in students){
+            console.log(students[y]);
+        }
+
+
+
+
 
     </script>
     

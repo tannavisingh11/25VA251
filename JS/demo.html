@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hello JSS</title>
+    <title>Hello JS</title>
 </head>
+
 <body>
-    <h2>Java Script class</h2>
+    <h2>Java Script Class</h2>
     <script>
-//variable declaration in JS using var keyword
+        //variable declation in JS using var keyword
 
-var myName = "ABESEC";
-document.write(myName);
-console.log(myName);
+        var myName = "ABES"; //global
+        document.write(myName);
+        console.log(myName);
 
-function hello(){
-    var abc="demo";
-    console.log(abc);
-}
-hello();
-var myName="AKTU";
-console.log(myName);
+        function hello() {
+            var abc = "Demo";
+            console.log(abc);
+        }
+        hello();
 
-//JS execution using let and const keyword
-let msg = "Welcome to JSS";
-console.log(msg);
+        var myName = "AKTU";// redelcare and reassign
+        console.log(myName);
+        // JS Execution - Hoisting and Execution Phase 
+        // (Global and Local(block) Scope )
 
-msg ="thanks for visiting!";
-console.log(msg);
-    </script> 
+        //variable declaration using let and const(ES06)
+       let msg="Welcome to ABES";
+        console.log(msg);
+
+         msg="Thanks to visit!"; //reassign
+        console.log(msg);
+        // in const case, no redclare and reassign
+
+        // const msg="Thanks";
+    </script>
+
 </body>
+
+</html>
